@@ -30,3 +30,29 @@ users= [{
 }] 
 
 list(map(lambda users: users['house'],users))
+
+#Filter
+
+L=[1,2,4,5,65,54]
+
+list(filter(lambda x:x>3,L))
+
+fruits=['apple','cherry','banana']
+
+list(filter(lambda x:x.startswith('a'),fruits))
+
+
+#reduce()
+
+import functools
+L=[1,2,4,5,65,54]
+
+functools.reduce(lambda x,y:x+y,L)
+
+L=[1,2,4,5,65,54]
+
+#find the minimum value
+functools.reduce(lambda x,y:x if x>y else y,L)
+
+functools.reduce(lambda x,y:x if x<y else y,L)
+
